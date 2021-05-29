@@ -3,6 +3,7 @@ import 'package:artstation/config/custom_router.dart';
 import 'package:artstation/enums/enums.dart';
 import 'package:artstation/repositories/repositories.dart';
 import 'package:artstation/screens/create_post/cubit/create_post_cubit.dart';
+import 'package:artstation/screens/feed/bloc/feed_bloc.dart';
 import 'package:artstation/screens/profile/bloc/profile_bloc.dart';
 import 'package:artstation/screens/screens.dart';
 import 'package:artstation/screens/search/cubit/search_cubit.dart';
@@ -46,7 +47,13 @@ class TabNavigator extends StatelessWidget {
   Widget _getScreen(BuildContext context, BottomNavItem item) {
     switch (item) {
       case BottomNavItem.feed:
-        return FeedScreen();
+        return BlocProvider<FeedBloc>(
+          create: (context) => FeedBloc(
+            postRepository: context.read<PostRepository>(),
+            authBloc: context.read<AuthBloc>(),
+          )..add(FeedFetchPosts()),
+          child: FeedScreen(),
+        );
       case BottomNavItem.search:
         return BlocProvider<SearchCubit>(
           create: (context) =>
