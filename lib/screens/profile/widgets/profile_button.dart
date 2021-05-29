@@ -1,3 +1,4 @@
+import 'package:artstation/screens/edit_profile/edit_profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class ProfileButton extends StatelessWidget {
@@ -14,7 +15,10 @@ class ProfileButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return isCurrentUser
         ? FlatButton(
-      onPressed: () {},
+      onPressed: () => Navigator.of(context).pushNamed(
+        EditProfileScreen.routeName,
+        arguments: EditProfileScreenArgs(context: context),
+      ),
       color: Theme.of(context).primaryColor,
       textColor: Colors.white,
       child: const Text(
