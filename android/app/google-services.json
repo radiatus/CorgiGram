@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1032845804247",
+    "project_id": "flutter-artstation",
+    "storage_bucket": "flutter-artstation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032845804247:android:bf408ee86ae04a1680a692",
+        "android_client_info": {
+          "package_name": "com.radiatus.vsu.artstation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1032845804247-mqro8lmnkq86qn6s4tc8t2u64bni58sn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnPxWDXxguX_oaZ-w90uY6t70VP4MvLEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1032845804247-mqro8lmnkq86qn6s4tc8t2u64bni58sn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
