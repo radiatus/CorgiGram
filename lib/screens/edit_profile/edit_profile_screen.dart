@@ -153,9 +153,7 @@ class EditProfileScreen extends StatelessWidget {
       title: 'Profile Image',
     );
     if (pickedFile != null) {
-      context
-          .read<EditProfileCubit>()
-          .profileImageChanged(File(pickedFile.path));
+      context.read<EditProfileCubit>().profileImageChanged(pickedFile);
     }
   }
 
