@@ -5,6 +5,7 @@ import 'package:artstation/repositories/repositories.dart';
 import 'package:artstation/screens/create_post/cubit/create_post_cubit.dart';
 import 'package:artstation/screens/profile/bloc/profile_bloc.dart';
 import 'package:artstation/screens/screens.dart';
+import 'package:artstation/screens/search/cubit/search_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -47,7 +48,11 @@ class TabNavigator extends StatelessWidget {
       case BottomNavItem.feed:
         return FeedScreen();
       case BottomNavItem.search:
-        return SearchScreen();
+        return BlocProvider<SearchCubit>(
+          create: (context) =>
+              SearchCubit(userRepository: context.read<UserRepository>()),
+          child: SearchScreen(),
+        );
       case BottomNavItem.create:
         return BlocProvider<CreatePostCubit>(
           create: (context) => CreatePostCubit(
