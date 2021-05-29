@@ -1,4 +1,6 @@
 import 'package:artstation/config/paths.dart';
+import 'package:artstation/enums/enums.dart';
+import 'package:artstation/models/models.dart';
 import 'package:artstation/models/user_model.dart';
 import 'package:artstation/repositories/repositories.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -52,6 +54,18 @@ class UserRepository extends BaseUserRepository {
         .collection(Paths.userFollowers)
         .doc(userId)
         .set({});
+
+    final notification = Notif(
+      type: NotifType.follow,
+      fromUser: User.empty.copyWith(id: userId),
+      date: DateTime.now(),
+    );
+
+    _firebaseFirestore
+        .collection(Paths.notifications)
+        .doc(followUserId)
+        .collection(Paths.userNotifications)
+        .add(notification.toDocument());
   }
 
   @override

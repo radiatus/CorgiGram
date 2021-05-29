@@ -11,4 +11,6 @@ class Paths {
   static const String userFeed = 'userFeed';
   static const String likes = 'likes';
   static const String postLikes = 'postLikes';
+  static const String notifications = 'notifications';
+  static const String userNotifications = 'userNotifications';
 }

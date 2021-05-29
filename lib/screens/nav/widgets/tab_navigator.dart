@@ -5,6 +5,7 @@ import 'package:artstation/enums/enums.dart';
 import 'package:artstation/repositories/repositories.dart';
 import 'package:artstation/screens/create_post/cubit/create_post_cubit.dart';
 import 'package:artstation/screens/feed/bloc/feed_bloc.dart';
+import 'package:artstation/screens/notifications/bloc/notifications_bloc.dart';
 import 'package:artstation/screens/profile/bloc/profile_bloc.dart';
 import 'package:artstation/screens/screens.dart';
 import 'package:artstation/screens/search/cubit/search_cubit.dart';
@@ -72,7 +73,13 @@ class TabNavigator extends StatelessWidget {
           child: CreatePostScreen(),
         );
       case BottomNavItem.notifications:
-        return NotificationsScreen();
+        return BlocProvider<NotificationsBloc>(
+          create: (context) => NotificationsBloc(
+            notificationRepository: context.read<NotificationRepository>(),
+            authBloc: context.read<AuthBloc>(),
+          ),
+          child: NotificationsScreen(),
+        );
       case BottomNavItem.profile:
         return BlocProvider<ProfileBloc>(
           create: (_) => ProfileBloc(
