@@ -1,5 +1,6 @@
 import 'package:artstation/blocs/blocs.dart';
 import 'package:artstation/config/custom_router.dart';
+import 'package:artstation/cubits/cubits.dart';
 import 'package:artstation/enums/enums.dart';
 import 'package:artstation/repositories/repositories.dart';
 import 'package:artstation/screens/create_post/cubit/create_post_cubit.dart';
@@ -51,6 +52,7 @@ class TabNavigator extends StatelessWidget {
           create: (context) => FeedBloc(
             postRepository: context.read<PostRepository>(),
             authBloc: context.read<AuthBloc>(),
+            likedPostsCubit: context.read<LikedPostsCubit>(),
           )..add(FeedFetchPosts()),
           child: FeedScreen(),
         );
@@ -77,6 +79,7 @@ class TabNavigator extends StatelessWidget {
             userRepository: context.read<UserRepository>(),
             postRepository: context.read<PostRepository>(),
             authBloc: context.read<AuthBloc>(),
+            likedPostsCubit: context.read<LikedPostsCubit>(),
           )..add(
             ProfileLoadUser(userId: context.read<AuthBloc>().state.user.uid),
           ),

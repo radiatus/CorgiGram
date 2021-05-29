@@ -1,3 +1,4 @@
+import 'package:artstation/cubits/cubits.dart';
 import 'package:artstation/screens/feed/bloc/feed_bloc.dart';
 import 'package:artstation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
@@ -80,6 +81,7 @@ class _FeedScreenState extends State<FeedScreen> {
         return RefreshIndicator(
           onRefresh: () async {
             context.read<FeedBloc>().add(FeedFetchPosts());
+            context.read<LikedPostsCubit>().clearAllLikedPosts();
             return true;
           },
           child: ListView.builder(
@@ -87,7 +89,22 @@ class _FeedScreenState extends State<FeedScreen> {
             itemCount: state.posts.length,
             itemBuilder: (BuildContext context, int index) {
               final post = state.posts[index];
-              return PostView(post: post, isLiked: false);
+              final likedPostsState = context.watch<LikedPostsCubit>().state;
+              final isLiked = likedPostsState.likedPostIds.contains(post.id);
+              final recentlyLiked =
+              likedPostsState.recentlyLikedPostIds.contains(post.id);
+              return PostView(
+                post: post,
+                isLiked: isLiked,
+                recentlyLiked: recentlyLiked,
+                onLike: () {
+                  if (isLiked) {
+                    context.read<LikedPostsCubit>().unlikePost(post: post);
+                  } else {
+                    context.read<LikedPostsCubit>().likePost(post: post);
+                  }
+                },
+              );
             },
           ),
         );

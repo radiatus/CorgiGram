@@ -9,4 +9,6 @@ class Paths {
   static const String userFollowing = 'userFollowing';
   static const String feeds = 'feeds';
   static const String userFeed = 'userFeed';
+  static const String likes = 'likes';
+  static const String postLikes = 'postLikes';
 }

@@ -1,6 +1,7 @@
 import 'package:artstation/blocs/blocs.dart';
 import 'package:artstation/blocs/simple_bloc_observer.dart';
 import 'package:artstation/config/custom_router.dart';
+import 'package:artstation/cubits/liked_posts/liked_posts_cubit.dart';
 import 'package:artstation/repositories/repositories.dart';
 import 'package:artstation/screens/screens.dart';
 import 'package:equatable/equatable.dart';
@@ -40,6 +41,12 @@ class MyApp extends StatelessWidget {
           BlocProvider<AuthBloc>(
             create: (context) =>
                 AuthBloc(authRepository: context.read<AuthRepository>()),
+          ),
+          BlocProvider<LikedPostsCubit>(
+            create: (context) => LikedPostsCubit(
+              postRepository: context.read<PostRepository>(),
+              authBloc: context.read<AuthBloc>(),
+            ),
           ),
         ],
         child: MaterialApp(
