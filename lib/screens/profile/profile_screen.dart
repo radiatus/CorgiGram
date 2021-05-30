@@ -41,8 +41,6 @@ class _ProfileScreenState extends State<ProfileScreen>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
 
-
-
   @override
   void initState() {
     super.initState();
