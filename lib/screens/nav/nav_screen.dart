@@ -31,7 +31,7 @@ class NavScreen extends StatelessWidget {
     BottomNavItem.search: Icons.search,
     BottomNavItem.create: Icons.add,
     BottomNavItem.notifications: Icons.favorite_border,
-    BottomNavItem.profile: Icons.account_circle,
+    BottomNavItem.profile: Icons.pets,
   };
 
   @override

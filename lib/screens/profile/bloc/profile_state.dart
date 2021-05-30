@@ -26,7 +26,7 @@ class ProfileState extends Equatable {
       user: User.empty,
       posts: [],
       isCurrentUser: false,
-      isGridView: true,
+      isGridView: false,
       isFollowing: false,
       status: ProfileStatus.initial,
       failure: Failure(),

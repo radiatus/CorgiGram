@@ -10,7 +10,7 @@ class NotificationsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Notifications')),
+      appBar: AppBar(title: const Text('Notifications'), backgroundColor: Colors.orangeAccent,),
       body: BlocBuilder<NotificationsBloc, NotificationsState>(
         builder: (context, state) {
           switch (state.status) {

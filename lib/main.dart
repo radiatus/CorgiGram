@@ -53,10 +53,10 @@ class MyApp extends StatelessWidget {
           ),
         ],
         child: MaterialApp(
-          title: 'Flutter Instagram',
+          title: 'CorgiGram',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            primarySwatch: Colors.blue,
+            primarySwatch: Colors.orange,
             scaffoldBackgroundColor: Colors.grey[50],
             appBarTheme: AppBarTheme(
               brightness: Brightness.light,

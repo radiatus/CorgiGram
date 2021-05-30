@@ -55,6 +55,7 @@ class EditProfileScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text('Edit Profile'),
+          backgroundColor: Colors.orangeAccent,
         ),
         body: BlocConsumer<EditProfileCubit, EditProfileState>(
           listener: (context, state) {

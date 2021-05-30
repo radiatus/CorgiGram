@@ -26,6 +26,7 @@ class _SearchScreenState extends State<SearchScreen> {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.orangeAccent,
           title: TextField(
             controller: _textController,
             decoration: InputDecoration(

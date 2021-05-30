@@ -38,6 +38,7 @@ class _FeedScreenState extends State<FeedScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<FeedBloc, FeedState>(
+
       listener: (context, state) {
         if (state.status == FeedStatus.error) {
           showDialog(
@@ -57,7 +58,13 @@ class _FeedScreenState extends State<FeedScreen> {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('Instagram'),
+            title:
+            Row(children: <Widget>[
+              Text("CORGI", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28), textAlign: TextAlign.center,),
+              Text("GRAM", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 28), textAlign: TextAlign.center),
+            ],
+              mainAxisAlignment: MainAxisAlignment.center,),
+            backgroundColor: Colors.orangeAccent,
             actions: [
               if (state.posts.isEmpty && state.status == FeedStatus.loaded)
                 IconButton(

@@ -19,6 +19,7 @@ class CreatePostScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Create Post'),
+          backgroundColor: Colors.orangeAccent,
         ),
         body: BlocConsumer<CreatePostCubit, CreatePostState>(
           listener: (context, state) {
@@ -54,7 +55,7 @@ class CreatePostScreen extends StatelessWidget {
                       child: state.postImage != null
                           ? Image.file(state.postImage, fit: BoxFit.cover)
                           : const Icon(
-                        Icons.image,
+                        Icons.pets,
                         color: Colors.grey,
                         size: 120.0,
                       ),

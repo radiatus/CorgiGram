@@ -41,7 +41,7 @@ class LoginScreen extends StatelessWidget {
           },
           builder: (context, state) {
             return Scaffold(
-              backgroundColor: Colors.blueGrey,
+              backgroundColor: Colors.orangeAccent,
               resizeToAvoidBottomInset: false,
               body: Center(
                 child: Padding(
@@ -57,14 +57,11 @@ class LoginScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            const Text(
-                              'ARTSTATION',
-                              style: TextStyle(
-                                fontSize: 28.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
+                            Row(children: <Widget>[
+                              Text("CORGI", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28), textAlign: TextAlign.center,),
+                              Text("GRAM", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 28), textAlign: TextAlign.center),
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,),
                             const SizedBox(height: 12.0),
                             TextFormField(
                               decoration: InputDecoration(hintText: 'Email'),

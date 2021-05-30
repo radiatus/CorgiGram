@@ -67,7 +67,9 @@ class _ProfileScreenState extends State<ProfileScreen>
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.orangeAccent,
             title: Text(state.user.username),
+
             actions: [
               if (state.isCurrentUser)
                 IconButton(
@@ -100,6 +102,7 @@ class _ProfileScreenState extends State<ProfileScreen>
           child: CustomScrollView(
             slivers: [
               SliverToBoxAdapter(
+
                 child: Column(
                   children: [
                     Padding(
@@ -141,14 +144,14 @@ class _ProfileScreenState extends State<ProfileScreen>
                       .primaryColor,
                   unselectedLabelColor: Colors.grey,
                   tabs: [
-                    Tab(icon: Icon(Icons.grid_on, size: 28.0)),
                     Tab(icon: Icon(Icons.list, size: 28.0)),
+                    Tab(icon: Icon(Icons.grid_on, size: 28.0)),
                   ],
                   indicatorWeight: 3.0,
                   onTap: (i) =>
                       context
                           .read<ProfileBloc>()
-                          .add(ProfileToggleGridView(isGridView: i == 0)),
+                          .add(ProfileToggleGridView(isGridView: i == 1)),
                 ),
               ),
               state.isGridView
