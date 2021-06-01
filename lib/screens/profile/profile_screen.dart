@@ -69,7 +69,6 @@ class _ProfileScreenState extends State<ProfileScreen>
           appBar: AppBar(
             backgroundColor: Colors.orangeAccent,
             title: Text(state.user.username),
-
             actions: [
               if (state.isCurrentUser)
                 IconButton(

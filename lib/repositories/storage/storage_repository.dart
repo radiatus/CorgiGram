@@ -29,7 +29,6 @@ class StorageRepository extends BaseStorageRepository {
   }) async {
     var imageId = Uuid().v4();
 
-    // Update user profile image.
     if (url.isNotEmpty) {
       final exp = RegExp(r'userProfile_(.*).jpg');
       imageId = exp.firstMatch(url)[1];
