@@ -9,6 +9,12 @@ login: admin@corgi.com
 
 password: password
 
+Использовались при разработке:
+- Flutter
+- Firebase
+- Bloc
+- по мелочи либы, аля ImagePicker
+
 ## Видео
 
 Демонстрация работы приложения
