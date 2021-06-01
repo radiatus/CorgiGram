@@ -4,7 +4,9 @@
 * [Project description](https://docs.google.com/document/d/1UU77Yh_ths_IOo_140wtJ457QE2lhZ430FDd5fjSm5o/edit?usp=sharing)
 
 Тестовый аккаунт для входа (Можно создать свой и в поиске пользователей найти Admin, Alex и т.п, чтобы их посты в ленте появились):
+
 login: admin@corgi.com
+
 password: password
 
 ## Видео
