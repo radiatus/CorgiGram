@@ -15,8 +15,8 @@
 
 ## Скриншоты приложения
 
-<img src="https://user-images.githubusercontent.com/22119456/120373831-7e958f80-c321-11eb-8a51-b6478f9a9bc9.png" width="300"> <img src="https://user-images.githubusercontent.com/22119456/120373836-7fc6bc80-c321-11eb-8519-30c71097eced.png" width="300"> <img src="https://user-images.githubusercontent.com/22119456/120373838-805f5300-c321-11eb-865f-113aa2dd141e.png" width="300">
+<img src="https://user-images.githubusercontent.com/22119456/120373831-7e958f80-c321-11eb-8a51-b6478f9a9bc9.png" width="200"> <img src="https://user-images.githubusercontent.com/22119456/120373836-7fc6bc80-c321-11eb-8519-30c71097eced.png" width="200"> <img src="https://user-images.githubusercontent.com/22119456/120373838-805f5300-c321-11eb-865f-113aa2dd141e.png" width="200">
 
-<img src="https://user-images.githubusercontent.com/22119456/120373839-81908000-c321-11eb-956b-c15a1babb6fa.png" width="300"> <img src="https://user-images.githubusercontent.com/22119456/120373842-81908000-c321-11eb-91d4-697829af6b28.png" width="300"> <img src="https://user-images.githubusercontent.com/22119456/120373844-82291680-c321-11eb-901c-032a51c12d08.png" width="300">
+<img src="https://user-images.githubusercontent.com/22119456/120373839-81908000-c321-11eb-956b-c15a1babb6fa.png" width="200"> <img src="https://user-images.githubusercontent.com/22119456/120373842-81908000-c321-11eb-91d4-697829af6b28.png" width="200"> <img src="https://user-images.githubusercontent.com/22119456/120373844-82291680-c321-11eb-901c-032a51c12d08.png" width="200">
 
-<img src="https://user-images.githubusercontent.com/22119456/120373845-82c1ad00-c321-11eb-84b8-ddedc97b15de.png" width="300"> <img src="https://user-images.githubusercontent.com/22119456/120373847-835a4380-c321-11eb-9c94-59503a4ead95.png" width="300"> <img src="https://user-images.githubusercontent.com/22119456/120373850-83f2da00-c321-11eb-94db-75e2721987d7.png" width="300">
+<img src="https://user-images.githubusercontent.com/22119456/120373845-82c1ad00-c321-11eb-84b8-ddedc97b15de.png" width="200"> <img src="https://user-images.githubusercontent.com/22119456/120373847-835a4380-c321-11eb-9c94-59503a4ead95.png" width="200"> <img src="https://user-images.githubusercontent.com/22119456/120373850-83f2da00-c321-11eb-94db-75e2721987d7.png" width="200">
